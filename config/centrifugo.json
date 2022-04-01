@@ -1,0 +1,32 @@
+{
+  "token_hmac_secret_key": "secret",
+  "api_key": "Bearer",
+  "debug": true,
+  "log_level": "info",
+  "port": 8001,
+  "engine": "redis",
+  "redis_address": "redis://redis:6379",
+  "allowed_origins": [
+    "*"
+  ],
+  "proxy_connect_endpoint": "http://app:8000/chat/centrifugo/connect/",
+  "proxy_refresh_endpoint": "http://app:8000/chat/centrifugo/refresh/",
+  "proxy_publish_endpoint": "http://app:8000/chat/centrifugo/publish/",
+  "proxy_subscribe_endpoint": "http://app:8000/chat/centrifugo/subscribe/",
+  "proxy_http_headers": [
+    "*"
+  ],
+  "namespaces": [
+    {
+      "name": "rooms",
+      "publish": true,
+      "proxy_publish": true,
+      "proxy_subscribe": true,
+      "history_size": 10,
+      "history_ttl": "300s"
+    }
+  ],
+  "admin": true,
+  "admin_password": "asd",
+  "admin_secret": "<SECRET>"
+}
