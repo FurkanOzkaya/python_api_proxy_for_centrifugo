@@ -1,16 +1,27 @@
-# chat_system with extending Django Abstract User
-
-
-
+# Chat_System ~ Centrifugo Real Time Messaging with Django Backend Proxy.
 ----
 
-## Development 
-### Use Docker Compose
 
+[Centrifugo](https://centrifugal.dev/)
+
+
+## Development 
+
+---
+
+Please install 
+- Centfugo and redis (centrifugo uses it).
+- Postgress
+
+Note:
+- You can use docker for these 3 and you can run this app from vscode Run & Debug Section.
+
+## Deployment 
+---
 ```
 docker-compose up
 ```
-Open 
+Redirect to 
 ```
 localhost:9000/docs
 
@@ -21,8 +32,24 @@ localhost:9000/chat
 you need to create user and take token from docs and than 
 you are able to reach app with room name and token.
 
+---
+### Informations:
+ - You can find centrifugo and nginx config files in config folder.
+ - Centrifugo Proxy API's under chat/views.py
+
+
+</br>
+Photos
+
+----
+
+![centrifugo example](./image/centrifugo_example.PNG)
 
 ---
+UI is taken from one of centrifugo official examples.
+
+</br>
+
 ```
 MIT License
 
